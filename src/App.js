@@ -7,6 +7,10 @@ import { themeSettings } from "theme";
 import Layout from "screens/Layout";
 import Dashboard from "screens/Dashboard";
 import Products from "screens/Products";
+import Customers from "screens/Customers";
+import Transactions from "screens/Transactions";
+import Geography from "screens/Geography";
+import Overview from "screens/Overview";
 function App() {
   const mode = useSelector((state) => state.global.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
@@ -20,6 +24,10 @@ function App() {
               <Route path="/" element={<Navigate to="/dashboard" />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/products" element={<Products />} />
+              <Route path="/customers" element={<Customers />} />
+              <Route path="/transactions" element={<Transactions />} />
+              <Route path="/geography" element={<Geography />} />
+              <Route path="/overview" element={<Overview />} />
             </Route>
           </Routes>
         </ThemeProvider>
