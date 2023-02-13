@@ -11,6 +11,10 @@ import Customers from "screens/Customers";
 import Transactions from "screens/Transactions";
 import Geography from "screens/Geography";
 import Overview from "screens/Overview";
+import Daily from "screens/Daily";
+import Monthly from "screens/Monthly";
+import Breakdown from "screens/Breakdown";
+import Admin from "screens/Admin";
 function App() {
   const mode = useSelector((state) => state.global.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
@@ -28,6 +32,10 @@ function App() {
               <Route path="/transactions" element={<Transactions />} />
               <Route path="/geography" element={<Geography />} />
               <Route path="/overview" element={<Overview />} />
+              <Route path="/daily" element={<Daily />} />
+              <Route path="/monthly" element={<Monthly />} />
+              <Route path="/breakdown" element={<Breakdown />} />
+              <Route path="/admin" element={<Admin />} />
             </Route>
           </Routes>
         </ThemeProvider>
